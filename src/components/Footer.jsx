@@ -66,6 +66,7 @@ const Footer = () => {
             </div>
 
             <p className="text-center text-slate-300 text-sm lg:text-base mt-5">&copy; {year} Allbright Tech Ltd. All Rights Reserved.</p>
+            <p className="text-center text-slate-400 text-sm lg:text-base mt-5">Design and Developed by <span className='text-slate-300'>Godwin Inyene: </span>Signature will be remove upon client's purchase</p>
         </div>
 </footer>
   )

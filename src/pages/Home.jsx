@@ -11,6 +11,7 @@ import users2 from '../assets/images/banner_bg.jpg'
 import users3 from '../assets/images/investor-1.jpg'
 import contact_bg from '../assets/images/contact_bg.jpg'
 import { GrStatusGood } from "react-icons/gr";
+import { FaBoltLightning } from "react-icons/fa6";
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 const Home = ({banner}) => {
@@ -362,7 +363,7 @@ const Home = ({banner}) => {
             </div>
 
             <div className='mb-12 max-w-2xl mx-auto lg:max-w-none'data-aos="fade-up" data-aos-delay="300"  data-aos-duration="500" >
-              <h1 className='heading-primary text-5xl leading-[70px] font-semibold text-[rgb(40,44,49)]'>High Quality Projects Experts</h1>
+              <h1 className='heading-primary ext-[37px] lg:text-[50px] leading-[51.8px] lg:leading-[70px] font-semibold text-[rgb(40,44,49)]'>High Quality Projects Experts</h1>
             </div>
           </div>
 
@@ -717,19 +718,28 @@ const Home = ({banner}) => {
       {/* Section Contact Us Start */}
       <section className='py-12 lg:py-20 bg-cover px-7 lg:px-0 bg-center' style={{backgroundImage:`url(${contact_bg})`}}>
         <div className="max-w-6xl mx-auto">
-          <div className='flex'>
-            <div className='bg-red-700 grow-[2] mr-3 hidden'>some text</div>
-            <div className=' bg-white max-w-[584px]  pt-[77px] pr-[100px] pb-[120px] pl-[90px]'>
-              <h4 className='contact-title text-4xl leading-[46px] pl-9 mb-6 font-bold text-[#303442] relative'>
-                Your <span className='text-primary'>Best Option</span> <br />
-                in Electrical <br />Contractors 24/7
+          <div className="flex  gap-x-12 flex-col lg:flex-row items-center">
+
+            <div className='order-1 lg:order-none grow-[2] mr-3 flex items-center justify-center'>
+              <div className='h-[89px] w-[89px] rounded-full bg-white bg-opacity-35 animate-pulse flex items-center justify-center'>
+                <a href="" className=' h-[55px] w-[55px] rounded-full text-white relative text-xl flex justify-center items-center bg-primary'>
+                  <FaBoltLightning className='text-3xl'/>
+                </a>
+              </div>
+
+            </div>
+
+            <div className='mb-10 lg:mb-0 bg-white max-w-[584px] pt-6 lg:pt-[77px] pr-8 lg:pr-[100px] pb-12 lg:pb-[120px] pl-7 lg:pl-[90px] rounded-lg w-full lg:w-auto'>
+              <h4 className='contact-title text-2xl  lg:text-4xl leading-7 lg:leading-[46px] pl-9 mb-6 font-bold text-[#303442] relative'>
+                Your <span className='text-primary'>To Option</span> <br />
+                in Electrical <br />Services 24/7
               </h4>
               <p className='text-my-grey-light'>
                 Our experienced electricians are highly trained in all aspects of electrical service,
                 from office lighting and security systems to emergency repair.
               </p>
               <div className='mt-5'>
-                <Link to="services" className='inline-block text-white bg-primary rounded-full font-semibold px-4  py-2 transition-all duration-300 ease-in border-2 border-transparent hover:border-primary hover:bg-transparent hover:text-gold'>
+                <Link to="services" className='inline-block text-white bg-primary rounded-full font-semibold px-4  py-2 transition-all duration-300 ease-in border-2 border-transparent hover:border-primary hover:bg-transparent hover:text-primary'>
                   Explore Our Services &rarr;
                 </Link>
               </div>
