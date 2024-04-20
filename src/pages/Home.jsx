@@ -12,9 +12,10 @@ import users3 from '../assets/images/investor-1.jpg'
 import contact_bg from '../assets/images/contact_bg.jpg'
 import { GrStatusGood } from "react-icons/gr";
 import CountUp from 'react-countup';
-// import Scrolltrigger from 'scrolltrigger';
+import ScrollTrigger from 'react-scroll-trigger';
 const Home = ({banner}) => {
 
+  const[counter, setCounter] = useState(false);
   
   return (
     <div className=''>
@@ -302,44 +303,49 @@ const Home = ({banner}) => {
          
 
           <div className='mt-20 border-t border-t-my-grey-light'> 
-            <div className='md:grid md:grid-cols-2 lg:grid-cols-4 gap-1 pt-12'>
+            <div className=''>
+              <ScrollTrigger onEnter={()=>setCounter(true)} onExit={()=>setCounter(false)} >
+                {counter && (
+                  <div className='md:grid md:grid-cols-2 lg:grid-cols-4 gap-1 pt-12'>
+                    <div className="">
+                      <div className='lg:text-center mb-5 lg:mb-0'>
+                        <h1 className='text-my-grey text-6xl font-semibold mb-3'>
+                          <CountUp  start={0} end={13} suffix='+' />
+                        </h1>
+                      
+                        <p className='text-sky-950 text-md'>YEARS OF EXPERIENCE</p>
+                      </div>
+                    </div>
 
-              <div className="">
-                <div className='lg:text-center mb-5 lg:mb-0'>
-                    <h1 className='text-my-grey text-6xl font-semibold mb-3'>
-                      <CountUp  start={0} end={13} suffix='+' />
-                    </h1>
-                   
-                    <p className='text-sky-950 text-md'>YEARS OF EXPERIENCE</p>
-                </div>
-              </div>
+                    <div className="">
+                      <div className='lg:text-center mb-5 lg:mb-0'>
+                        <h1 className='text-my-grey text-6xl font-semibold mb-3'>
+                          <CountUp  start={0} end={327} suffix='+' />
+                        </h1>
+                        <p className='text-sky-950 text-md'>PROJECT DONE</p>
+                      </div>
+                    </div>
 
-              <div className="">
-                <div className='lg:text-center mb-5 lg:mb-0'>
-                  <h1 className='text-my-grey text-6xl font-semibold mb-3'>
-                    <CountUp  start={0} end={327} suffix='+' />
-                  </h1>
-                  <p className='text-sky-950 text-md'>PROJECT DONE</p>
-                </div>
-              </div>
+                    <div className="">
+                      <div className='lg:text-center mb-5 lg:mb-0'>
+                        <h1 className='text-my-grey text-6xl font-semibold mb-3'>
+                          <CountUp  start={0} end={12}/>
+                        </h1>
+                        <p className='text-sky-950 text-md'>AWARDS WON</p>
+                      </div>
+                    </div>
 
-              <div className="">
-                <div className='lg:text-center mb-5 lg:mb-0'>
-                  <h1 className='text-my-grey text-6xl font-semibold mb-3'>
-                    <CountUp  start={0} end={12}/>
-                  </h1>
-                  <p className='text-sky-950 text-md'>AWARDS WON</p>
-                </div>
-              </div>
-
-              <div className="">
-                <div className='lg:text-center'>
-                  <h1 className='text-my-grey text-6xl font-semibold mb-3'>
-                    <CountUp  start={0} end={99} suffix='%' />
-                  </h1>
-                  <p className='text-sky-950 text-md'>HAPPY REVIEWS</p>
-                </div>
-              </div>
+                    <div className="">
+                      <div className='lg:text-center'>
+                        <h1 className='text-my-grey text-6xl font-semibold mb-3'>
+                          <CountUp  start={0} end={99} suffix='%' />
+                        </h1>
+                        <p className='text-sky-950 text-md'>HAPPY REVIEWS</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </ScrollTrigger>
 
             </div>
           </div>
