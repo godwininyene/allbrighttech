@@ -11,7 +11,23 @@ import { faqs } from '../data/data';
 const Contact = () => {
   const [ID, setID] = useState(null);
 
-  const toggleID = ID=>setID(prevID=> prevID == null ? ID :null)
+  const toggleID = ID=>setID(prevID=> prevID == null ? ID :null);
+
+  const sendToWhatsApp = e =>{
+    e.preventDefault();
+    const number = '+2347042973460'
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    const subject = document.getElementById('subject').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+
+    const url = `https://wa.me/${number}?text=Name:${name} Email:${email} Phone:${phone} Subject:${subject} Service:${service} Message:${message} `;
+    window.open(url, '_blank').focus();
+   
+  }
   return (
     <div className=''>
       {/* About Us Banner Start */}
@@ -82,12 +98,13 @@ const Contact = () => {
               <div className='container'>
                 <div className='row'>
                   <div data-aos="fade-up" className='py-3 px-4'>
-                    <form className=''>
+                    <form className='' onSubmit={sendToWhatsApp}>
                       <div className="row">
                         <div className='form-group col-md-12 mb-4'>
                           <input 
                             type="text" 
                             name='fullname' 
+                            id="name"
                             required 
                             placeholder='Full name'
                             className='block w-full py-2 px-3 bg-white font-normal border border-slate-300 rounded-md transition-all duration-100 focus:outline-0 focus:border-primary' 
@@ -102,6 +119,7 @@ const Contact = () => {
                           <input 
                             type="email" 
                             name='email' 
+                            id='email'
                             required 
                             placeholder='Email Address' 
                             className='block w-full py-2 px-3 bg-white font-normal border border-slate-300 rounded-md transition-all duration-100 focus:outline-0 focus:border-primary' 
@@ -110,6 +128,7 @@ const Contact = () => {
                           <input 
                             type="tel" 
                             name='phone' 
+                            id='phone'
                             required 
                             placeholder='Phone Number' 
                             className='block w-full py-2 px-3 bg-white font-normal border border-slate-300 rounded-md transition-all duration-100 focus:outline-0 focus:border-primary' 
@@ -123,16 +142,16 @@ const Contact = () => {
                           <input 
                             type="text" 
                             name='subject' 
+                            id='subject'
                             required 
                             placeholder='Subject'
                             className='block w-full py-2 px-3 bg-white font-normal border border-slate-300 rounded-md transition-all duration-100 focus:outline-0 focus:border-primary' 
                           />
 
                           <select 
-                            type="tel" 
-                            name='phone' 
-                            required 
-                            placeholder='Phone Number' 
+                            name='service' 
+                            required  
+                            id='service'
                             className='block w-full py-2 px-3 bg-white font-normal border border-slate-300 rounded-md transition-all duration-100 focus:outline-0 focus:border-primary' 
                           >
                             <option value="" defaultValue="selected">- Select Service -</option>
@@ -158,6 +177,7 @@ const Contact = () => {
                             name='message' 
                             required 
                             placeholder='Message'
+                            id='message'
                             rows={7}
                             className='block w-full py-2 px-3 bg-white font-normal border border-slate-300 rounded-md transition-all duration-100 focus:outline-0 focus:border-primary' 
                           />
