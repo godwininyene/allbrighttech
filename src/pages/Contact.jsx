@@ -15,7 +15,7 @@ const Contact = () => {
 
   const sendToWhatsApp = e =>{
     e.preventDefault();
-    const number = '+2347042973460'
+    const number = '+2348144098649'
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
