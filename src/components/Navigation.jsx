@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/images/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {AiFillHome, AiFillInfoCircle} from 'react-icons/ai';
 import {FaPhoneSquareAlt,FaGlassCheers,FaUserFriends, FaMap, FaBars,FaTools} from 'react-icons/fa';
 import{MdClose, MdLocationPin} from 'react-icons/md';
@@ -8,6 +8,7 @@ import {FcAlarmClock} from 'react-icons/fc';
 
 const Navigation = () => {
     const [toggle, setToggle] = React.useState(false);
+    const activeStyle={color:'#0000FF'};
   return (
     <div className=''>
         <div className='bg-black px-7 py-2'>
@@ -87,34 +88,34 @@ const Navigation = () => {
                         <ul className="text-sm flex-grow">
                             <li className="block lg:inline-block">
                                 
-                                <Link to="/"  className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4">
+                                <NavLink to="/"  className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4" style={({isActive})=> isActive ? activeStyle : null}>
                                     <AiFillHome className='text-primary inline h-5 w-5'/>
                                     Home
-                                </Link>
+                                </NavLink>
                             </li>
 
                             <li className="block lg:inline-block">
                             
-                                <Link to="about" className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4">
+                                <NavLink to="about" className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4" style={({isActive})=> isActive ? activeStyle : null}>
                                     <AiFillInfoCircle className='text-primary inline h-5 w-5'/>
                                     About
-                                </Link>
+                                </NavLink>
                             </li>
 
                             <li className="block lg:inline-block">
                             
-                            <Link to="services" spy={true} smooth={true} offset={0} duration={1000} className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4">
+                            <NavLink to="services" spy={true} smooth={true} offset={0} duration={1000} className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4" style={({isActive})=> isActive ? activeStyle : null}>
                                 <FaTools className='text-primary inline h-5 w-5'/>
                                 Services
-                            </Link>
+                            </NavLink>
                         </li>
 
                             <li className="block lg:inline-block">
                             
-                                <Link to="contact" spy={true} smooth={true} offset={0} duration={1000} className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4">
+                                <NavLink to="contact" spy={true} smooth={true} offset={0} duration={1000} className="transition-all cursor-pointer duration-100 text-black hover:text-primary flex items-center gap-1  py-2 px-4 md:py-1 md:px-3 lg:px-4" style={({isActive})=> isActive ? activeStyle : null}>
                                     <FaPhoneSquareAlt className="text-primary inline h-5 w-5"/>
                                     Contact
-                                </Link>
+                                </NavLink>
                             </li>
 
                         </ul>

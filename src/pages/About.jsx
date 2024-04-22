@@ -44,7 +44,7 @@ const About = () => {
       {/* About Us Banner End */}
 
 
-       {/* Section About Start */}
+      {/* Section About Start */}
        <section className='py-12 lg:py-20 px-7 lg:px-0'>
         <div className="max-w-6xl mx-auto">
           <div className="flex  gap-x-12 flex-col lg:flex-row items-center">
