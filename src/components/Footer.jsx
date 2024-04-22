@@ -1,74 +1,96 @@
-import React from 'react'
-import logo from '../assets/images/logo.png'
-import {FaFacebook, FaTwitterSquare, FaInstagramSquare,FaYoutube} from 'react-icons/fa';
-
+import React, { useEffect } from 'react'
+import logo from '../assets/images/logo.png';
+import {FaPhoneAlt, FaEnvelope} from 'react-icons/fa';
+import { MdLocationPin } from 'react-icons/md';
+// import bannerBg from '@/Assets/Images/forex.jpeg';
+import bannerBg from '../assets/images/electrician_2.jpg'
+import { Link } from 'react-router-dom'
 const Footer = () => {
     const year = new Date().getFullYear();
   return (
-    <footer className="bg-slate-950 py-10">
-        <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row justify-center items-center border-b border-b-slate-400 pb-3">
+    <div className={`pt-10 bg-slate-900 dark:bg-slate-950 text-white min-h-[300px]`}>
+      <div className="mx-auto max-w-6xl h-auto lg:h-96  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
-                <div className="w-full lg:w-auto">
-                    <div className="text-center lg:text-left">
-                        <img src={logo} alt="Logo" className="w-40 inline-block"/>
-                    </div>
-                </div>
+        <div className="md:col-span-2 overflow-hidden">
+          <div className='mb-4 lg:mb-0 ml-5 lg:ml-0'>
 
-                <div className="w-1/3 grow my-5 lg:my-0">
-                    <ul className="flex items-center text-center justify-center">
-                        <li className="mr-5 inline-block">
-                            <a href="index.php" className="transition-all duration-100 text-white hover:text-primary">Home</a>
-                        </li>
+            <Link href="/" className='block text-left mb-6'>
+              <img src={logo} className='w-auto h-24 inline'/>
+            </Link>
 
-                        <li className="mr-5 inline-block">
-                            <a href="#about" className="transition-all duration-100 text-white hover:text-primary">About</a>
-                        </li>
-                    
-                        <li className="mr-5 inline-block">
-                            <a href="#exhibition" className="transition-all duration-100 text-white hover:text-primary">Services</a>
-                        </li>
-                        <li className="mr-5 inline-block">
-                            <a href="#partners" className="transition-all duration-100 text-white hover:text-primary">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="w-full lg:w-auto">
-
-                    <ul className="flex gap-x-2 ml-5 lg:ml-auto items-center justify-center lg:justify-end">
-                        <li>
-                            <a href="" className="transition-all duration-100 bg-primary hover:bg-primary-light text-sm inline-block text-center w-8 h-8 leading-8 text-white rounded">
-                                <FaFacebook className='inline h-5 w-5'/>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" className="transition-all duration-100 bg-primary hover:bg-primary-light text-sm inline-block text-center w-8 h-8 leading-8 text-white rounded">
-                                <FaTwitterSquare className="inline h-5 w-5"/>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" className="transition-all duration-100 bg-primary hover:bg-primary-light text-sm inline-block text-center w-8 h-8 leading-8 text-white rounded">
-                            
-                               <FaInstagramSquare className='inline h-5 w-5 '/>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" className="transition-all duration-100 bg-primary hover:bg-primary-light text-sm inline-block text-center w-8 h-8 leading-8 text-white rounded">
-                                <FaYoutube className="inline h-5 w-5" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <p className='text-sm leading-6 text-[#B6B6B6] pr-5'>
+                Your trusted source for top-quality electrical and electronics services. 
+                Whether you need expert installation, reliable repairs, or comprehensive maintenance, 
+                our team of skilled professionals is here to meet your needs.
+            </p>
+            <div className='mt-5'>
+              <img src={bannerBg} className='w-full object-cover rounded-md'/>
             </div>
-
-            <p className="text-center text-slate-300 text-sm lg:text-base mt-5">&copy; {year} Allbright Tech Ltd. All Rights Reserved.</p>
-            <p className="text-center text-slate-400 text-sm lg:text-base mt-5">Design and Developed by <span className='text-slate-300'>Godwin Inyene: </span>Signature will be remove upon client's purchase</p>
+          </div>
         </div>
-</footer>
+
+        <div className="ml-5 lg:ml-0">
+          <h3 className='text-left font-semibold text-white mb-5 pb-5 border-b border-b-slate-200'>Quick Links</h3>
+
+          <ul className='footer-nav-list list-none'>
+            <li className='text-left mb-3 pl-5 text-sm font-semibold relative group'>
+                <Link to='/' className="text-[#B6B6B6] transition-all duration-300 hover:text-slate-100">Home</Link>
+            </li>
+            <li className='text-left mb-3 pl-5 text-sm font-semibold relative group'>
+                <Link to='about' className="text-[#B6B6B6] transition-all duration-300 hover:text-slate-100">About</Link>
+            </li>
+            <li className='text-left mb-3 pl-5 text-sm font-semibold relative group'>
+                <Link  to='services' className="text-[#B6B6B6] transition-all duration-300 hover:text-slate-100">Services</Link>
+            </li>
+            <li className='text-left mb-3 pl-5 text-sm font-semibold relative group'>
+                <Link to='contact' className="text-[#B6B6B6] transition-all duration-300 hover:text-slate-100">Contact</Link>
+            </li>
+            {/* <li className='text-left mb-3 pl-5 text-sm font-semibold relative group'>
+                <Link to='' className="text-[#B6B6B6] transition-all duration-300 hover:text-slate-100">Faq</Link>
+            </li> */}
+          </ul>
+        </div>
+
+        <div className="ml-5">
+          
+          <h3 className='text-left font-semibold text-white mb-5 pb-5 border-b border-b-slate-200'>Contact Us</h3>
+          <div className='flex gap-x-3 items-center mb-5'>
+            <div className=' h-9 w-9 rounded-full border-[2px] border-primary flex-shrink-0 flex justify-center items-center'>
+             <MdLocationPin className={`inline text-sm`} />
+            </div>
+            <p className='text-[#B6B6B6]'>
+                Opposite Salvation Ministry, Nekede, Owerri
+            </p>
+          </div>
+
+          <div className='flex gap-x-3 items-center mb-5'>
+            <div className=' h-9 w-9 rounded-full border-[2px] border-primary flex-shrink-0 flex justify-center items-center'>
+             <FaEnvelope className={`inline text-sm`} />
+            </div>
+            <p className='text-[#B6B6B6] transition-all duration-300 hover:text-slate-100 flex-shrink-0'>
+              <a href="mailto:support@massive-wealthfinance.com">support@allbrighttech.com</a>
+            </p>
+          </div>
+
+          <div className='flex gap-x-3 items-center mb-5'>
+            <div className=' h-9 w-9 rounded-full border-[2px] border-primary flex-shrink-0 flex justify-center items-center'>
+             <FaPhoneAlt className={`inline text-sm`} />
+            </div>
+            <p className='text-[#B6B6B6] transition-all duration-300 hover:text-slate-100 flex-shrink-0'>
+                <a  href="tel:+2348144098649">08144098649</a> ||   <a  href="tel:+2348144098649">08144098649</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className='font-medium text-[#999] text-center text-sm py-5'>
+        <span className=''>
+        All rights reserved. copyright {year} 
+        <Link href='/' className='text-primary'> allbrighttech.com</Link>
+        </span>
+      </div>
+
+      <p className="text-center text-slate-400 text-xs lg:text-base mt-5 py-2 px-5 lg:px-0">Design and Developed by <span className='text-slate-300'>Godwin Inyene: </span>Signature will be remove upon client's purchase</p>
+    </div>
   )
 }
 

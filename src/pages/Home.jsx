@@ -588,7 +588,7 @@ const Home = ({banner}) => {
 
                   <div className='flex mb-5'>
                     <div className='flex-shrink-0 mr-5'>
-                      <FaPhoneSquareAlt className='text-primary'/>
+                      <GrStatusGood className='text-primary text-2xl'/>
                     </div>
                     <div className='-mt-1'>
                       <h3 className='text-gray-100 text-lg font-semibold'>Certified Company</h3>
@@ -597,7 +597,7 @@ const Home = ({banner}) => {
 
                   <div className='flex mb-5'>
                     <div className='flex-shrink-0 mr-5'>
-                      <FaPhoneSquareAlt className='text-primary'/>
+                      <GrStatusGood className='text-primary text-2xl'/>
                     </div>
                     <div className='-mt-1'>
                       <h3 className='text-gray-100 text-lg font-semibold'>Skilled Technicians</h3>
@@ -606,7 +606,7 @@ const Home = ({banner}) => {
 
                   <div className='flex mb-5'>
                     <div className='flex-shrink-0 mr-5'>
-                      <FaPhoneSquareAlt className='text-primary'/>
+                      <GrStatusGood className='text-primary text-2xl'/>
                     </div>
                     <div className='-mt-1'>
                       <h3 className='text-gray-100 text-lg font-semibold'>Happy Reviews</h3>
@@ -731,7 +731,7 @@ const Home = ({banner}) => {
 
             <div className='mb-10 lg:mb-0 bg-white max-w-[584px] pt-6 lg:pt-[77px] pr-8 lg:pr-[100px] pb-12 lg:pb-[120px] pl-7 lg:pl-[90px] rounded-lg w-full lg:w-auto'>
               <h4 className='contact-title text-2xl  lg:text-4xl leading-7 lg:leading-[46px] pl-9 mb-6 font-bold text-[#303442] relative'>
-                Your <span className='text-primary'>To Option</span> <br />
+                Your <span className='text-primary'>Go To Option</span> <br />
                 in Electrical <br />Services 24/7
               </h4>
               <p className='text-my-grey-light'>
