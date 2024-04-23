@@ -52,7 +52,7 @@ const ProjectSection = () => {
         {
             (displayProjects.length > 0)?(
                 displayProjects.map(project=>(
-                    <div  key={project.id}>
+                    <div  key={project.id} className='mb-7 lg:mb-0'>
                         <img src={project.image} alt="" className='w-full'/>
                     </div>
                 ))

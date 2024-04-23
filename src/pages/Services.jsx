@@ -48,7 +48,7 @@ const Services = () => {
             <div className='w-full lg:w-2/4 flex-shrink-0 order-1 lg:order-none'>
               {/* About images Gallery Start */}
 
-              <div className='relative pb-32'>
+              <div className='relative'>
                 <img src={electrician_2} alt="" className='h-full rounded-xl image-outline'/>
                 {/* <img src={highTension} alt="" className='w-2/3 -mt-20 absolute right-5 rounded-xl image-outline'/> */}
               </div>
